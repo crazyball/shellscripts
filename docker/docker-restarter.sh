@@ -14,7 +14,8 @@ fi
 
 if [ "$RUNNING" == "false" ]; then
   echo "NOT RUNNING - restarting $CONTAINER"
-  docker-compose restart
+  docker-compose stop
+  docker-compose start
 else
   echo "RUNNING"
 fi
